@@ -44,7 +44,7 @@ Each module is built independently. Open a separate terminal for each of the fol
 Install dependencies for each:
 
 ```bash
-npm run install
+npm install
 ```
 
 Navigate into each directory and start watch:
