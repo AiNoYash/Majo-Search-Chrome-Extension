@@ -31,32 +31,23 @@ Compatible with any **Chromium-based browser**.
 
 ## Developer Setup
 
-### 1. Install Dependencies
 
-Open your terminal and navigate to the project root:
+### 1. Build the Extension
 
-```bash
-cd Majo-Search
-```
-
-Install the project dependencies:
-
-```bash
-npm install
-```
-
----
-
-### 2. Build the Extension
-
-Each module is built independently. Open a separate terminal for each of the following directories (recommended during development):
+Each module is built independently. Open a separate terminal for each of the following directories:
 
 - `page-options`
 - `page-boarding`
 - `content`
 - `background`
 
-Navigate into each directory and start the watcher:
+Install dependencies for each:
+
+```bash
+npm run install
+```
+
+Navigate into each directory and start watch:
 
 ```bash
 npm run watch
@@ -70,7 +61,7 @@ npm run watch
 
 ---
 
-### 3. Load the Extension
+### 2. Load the Extension
 
 1. Open your browser's extensions page.
 
