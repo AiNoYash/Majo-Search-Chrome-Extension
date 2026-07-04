@@ -1,30 +1,83 @@
 # Majo Search
 
-[Chrome Web Store Link](https://chromewebstore.google.com/detail/majo-smartest-ctrl+f-find/hlakcdjgidoppjilpbephlhkfbkdmdco)
+**Chrome Web Store:**  
+https://chromewebstore.google.com/detail/majo-smartest-ctrl+f-find/hlakcdjgidoppjilpbephlhkfbkdmdco
 
-Majo Search is a powerful Chrome extension that upgrades your standard on-page search (Ctrl+F) with advanced algorithms like fuzzy matching, phonetic search, and regex support.
-Works on any Chromium browser.
+Majo Search is a powerful Chrome extension that upgrades your standard on-page search (**Ctrl + F**) with advanced search algorithms such as **fuzzy matching**, **phonetic search**, and **regular expression (regex)** support.
 
-## How to Use (Manual Installation)
+Compatible with any **Chromium-based browser**.
 
-1. Unzip the `build.zip` file.
-2. Open your browser and go to the extensions page (e.g., `chrome://extensions/`).
-3. Turn on **Developer mode**.
+---
+
+## Manual Installation
+
+1. Extract the contents of `build.zip`.
+
+2. Open your browser's extensions page:
+
+   - **Chrome:** `chrome://extensions/`
+   - **Microsoft Edge:** `edge://extensions/`
+   - **Brave:** `brave://extensions/`
+
+3. Enable **Developer mode**.
+
 4. Click **Load unpacked**.
-5. Select the root folder from the unzipped files (the folder containing `manifest.json`).
+
+5. Select the extracted root folder (the one containing `manifest.json`).
+
+6. The extension is now installed and ready to use.
+
+---
 
 ## Developer Setup
 
-To build the extension from source, you need to compile its individual modules.
+### 1. Install Dependencies
 
-1. Open your terminal.
-2. Navigate into each of the following directories (running them in separate terminals is recommended for continuous development):
-   - `page-options`
-   - `page-boarding`
-   - `content`
-   - `background`
-3. In each directory, run the following command for continuous building:
-   ```bash
-   npm run watch
-   (Use npm run build instead if you only need a single build).
-4. Once built, go to your browser's extensions page, enable Developer mode, click Load unpacked, and select the root directory containing manifest.json.
+Open your terminal and navigate to the project root:
+
+```bash
+cd Majo-Search
+```
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+---
+
+### 2. Build the Extension
+
+Each module is built independently. Open a separate terminal for each of the following directories (recommended during development):
+
+- `page-options`
+- `page-boarding`
+- `content`
+- `background`
+
+Navigate into each directory and start the watcher:
+
+```bash
+npm run watch
+```
+
+> **Note:** If you only need a one-time production build, use:
+>
+> ```bash
+> npm run build
+> ```
+
+---
+
+### 3. Load the Extension
+
+1. Open your browser's extensions page.
+
+2. Enable **Developer mode**.
+
+3. Click **Load unpacked**.
+
+4. Select the project's root directory (the folder containing `manifest.json`).
+
+The extension will now be loaded and will automatically update whenever the watched modules are rebuilt.
